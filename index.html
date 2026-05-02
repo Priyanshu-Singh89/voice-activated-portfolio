@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">🎤 Voice Portfolio</div>
+      <button id="menu-toggle" class="hamburger-menu hidden-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="toggle-theme" class="theme-toggle" title="Toggle Dark/Light Mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button id="toggle-admin" class="ghost-btn">⚙️ Admin</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero glass-card">
+        <div class="hero-content">
+          <h1>Welcome to My <span class="gradient-text">Voice-Activated</span> Portfolio</h1>
+          <p class="subtitle">Explore my work using voice commands. Say "about", "projects", "skills", or "contact"</p>
+          <div class="voice-panel">
+            <button id="mic-toggle" class="primary-btn mic-btn">
+              <span class="mic-icon">🎤</span> Start Listening
+            </button>
+            <div class="status-group">
+              <span id="voice-status" class="status-badge">Inactive</span>
+              <span id="transcript" class="transcript-text">Click mic to start listening...</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="glass-card section-block">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <span class="section-icon">👨‍💻</span>
+        </div>
+        <p>I'm a passionate developer specializing in interactive web experiences with cutting-edge APIs.</p>
+      </section>
+
+      <section id="projects" class="glass-card section-block">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <span class="section-icon">📁</span>
+        </div>
+        <div class="search-container">
+          <input type="text" id="project-search" class="search-input" placeholder="🔍 Search projects..." />
+        </div>
+        <div id="project-list" class="project-list">
+          <p class="placeholder">No projects yet. Use admin panel!</p>
+        </div>
+      </section>
+
+      <section id="skills" class="glass-card section-block">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <span class="section-icon">🛠️</span>
+        </div>
+        <div class="skill-grid">
+          <span class="skill-badge">HTML5</span>
+          <span class="skill-badge">CSS3</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">Web APIs</span>
+          <span class="skill-badge">Responsive</span>
+        </div>
+      </section>
+
+      <section id="contact" class="glass-card section-block">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <span class="section-icon">💬</span>
+        </div>
+        <p>Get in touch via email or social media!</p>
+      </section>
+    </main>
+
+    <!-- Admin Panel -->
+    <div id="admin-panel" class="admin-panel glass-card hidden">
+      <div class="admin-header">
+        <h3>Admin Panel</h3>
+        <button id="close-admin" class="close-btn">✕</button>
+      </div>
+      <form id="project-form" class="admin-form">
+        <input id="project-title" type="text" placeholder="Project Title" required />
+        <textarea id="project-description" placeholder="Description" required></textarea>
+        <input id="project-link" type="url" placeholder="Project Link" required />
+        <button type="submit" class="primary-btn">Add Project</button>
+      </form>
+      <button id="clear-projects" class="danger-btn">Clear All</button>
+    </div>
+
+    <footer class="footer">
+      <p>Built with ❤️ using HTML, CSS, JavaScript & Web Speech API</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+        <div class="section-header">
+          <h2>About Me</h2>
+          <span class="section-icon">👨‍💻</span>
+        </div>
+        <p>I'm a passionate full-stack developer specializing in interactive web experiences. I build modern, responsive applications using HTML, CSS, and JavaScript with a focus on user experience and performance. This portfolio showcases my ability to implement cutting-edge web APIs like the Web Speech API for hands-free navigation.</p>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>🚀 Innovation</h3>
+            <p>Constantly exploring new web technologies and APIs</p>
+          </div>
+          <div class="about-card">
+            <h3>✨ Design</h3>
+            <p>Creating beautiful, modern interfaces with glassmorphism</p>
+          </div>
+          <div class="about-card">
+            <h3>⚡ Performance</h3>
+            <p>Building fast, responsive applications</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="glass-card section-block">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <span class="section-icon">📁</span>
+        </div>
+        <div class="search-container">
+          <input 
+            type="text" 
+            id="project-search" 
+            class="search-input" 
+            placeholder="🔍 Search projects by title or description..."
+          />
+        </div>
+        <div id="project-list" class="project-list">
+          <p class="placeholder">No projects yet. Use the admin panel to add one!</p>
+        </div>
+      </section>
+
+      <section id="skills" class="glass-card section-block">
+        <div class="section-header">
+          <h2>Skills & Technologies</h2>
+          <span class="section-icon">🛠️</span>
+        </div>
+        <div class="skill-categories">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-grid">
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">Responsive Design</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>APIs & Features</h3>
+            <div class="skill-grid">
+              <span class="skill-badge">Web Speech API</span>
+              <span class="skill-badge">Local Storage</span>
+              <span class="skill-badge">DOM Manipulation</span>
+              <span class="skill-badge">Event Handling</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Design</h3>
+            <div class="skill-grid">
+              <span class="skill-badge">Glassmorphism</span>
+              <span class="skill-badge">UI/UX</span>
+              <span class="skill-badge">Animations</span>
+              <span class="skill-badge">Accessibility</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="glass-card section-block">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <span class="section-icon">💬</span>
+        </div>
+        <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out or download my resume!</p>
+        <div class="contact-buttons">
+          <a href="resume.pdf" download class="contact-btn primary-style">📄 Download Resume</a>
+          <a href="mailto:contact@example.com" class="contact-btn">📧 Email</a>
+          <a href="#" class="contact-btn">💼 LinkedIn</a>
+          <a href="#" class="contact-btn">🐙 GitHub</a>
+          <a href="#" class="contact-btn">🐦 Twitter</a>
+        </div>
+      </section>
+    </main>
+
+    <aside id="admin-panel" class="admin-panel glass-card hidden">
+      <div class="admin-header">
+        <h3>Admin Panel</h3>
+        <button id="close-admin" class="close-btn">✕</button>
+      </div>
+      <form id="project-form" class="admin-form">
+        <label for="project-title">Project Title</label>
+        <input id="project-title" type="text" placeholder="e.g., Voice Portfolio" required />
+        
+        <label for="project-description">Project Description</label>
+        <textarea id="project-description" rows="3" placeholder="Describe your amazing project..." required></textarea>
+        
+        <label for="project-image">Project Image URL</label>
+        <input id="project-image" type="url" placeholder="https://example.com/image.jpg" required />
+        
+        <label for="project-link">Project Link</label>
+        <input id="project-link" type="url" placeholder="https://example.com" required />
+        
+        <button type="submit" class="primary-btn">➕ Add Project</button>
+      </form>
+      <div class="admin-controls">
+        <button id="clear-projects" class="danger-btn">🗑️ Clear All Projects</button>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <p>Built with ❤️ using HTML, CSS, JavaScript & Web Speech API</p>
+      <p class="footer-info">© 2026 Voice Portfolio | Voice-Activated Navigation</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
